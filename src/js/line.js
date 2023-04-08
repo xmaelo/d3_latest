@@ -41,15 +41,17 @@ const data = [
 x.domain(data.map(function(d) { return d.xAxis; }));
 y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
-svg.append("g")
-    .attr("class", "x axis")
-    .attr("transform", "translate(0," + height + ")")
-    .call(xAxis)
-  .selectAll("text")
-    .style("text-anchor", "end")
-    .attr("dx", "-.8em")
-    .attr("dy", "-.55em")
-    .attr("transform", "rotate(-90)" );
+
+
+// svg.append("g")
+//     .attr("class", "x axis")
+//     .attr("transform", "translate(0," + height + ")")
+//     .call(xAxis)
+//   .selectAll("text")
+//     .style("text-anchor", "end")
+//     .attr("dx", "-.8em")
+//     .attr("dy", "-.55em")
+//     .attr("transform", "rotate(-90)" );
 
 // svg.append("g")
 //     .attr("class", "y axis")
@@ -69,6 +71,23 @@ svg.selectAll("bar")
     .attr("width", x.rangeBand())
     .attr("y", function(d) { return y(d.value); })
     .attr("height", function(d) { return height - y(d.value); })
-    .html(' <text x="20" y="35" class="small">My</text>')
+
    
 
+svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + 80 + ")")
+    .call(xAxis)
+    .selectAll("text")
+    .style("text-anchor", "end")
+    .attr("dx", "-.8em")
+    .attr("class", "tobereplace")
+    .attr("dy", "-.55em")
+    .attr("transform", "rotate(-90)" )
+    .text('hdhd')
+
+const tobereplace = d3.selectAll('.tobereplace')[0]
+for (var i = tobereplace.length - 1; i >= 0; i--) {
+  tobereplace[i].innerHTML = data[i].label
+  
+}

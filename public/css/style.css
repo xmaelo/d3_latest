@@ -321,7 +321,10 @@ td {
   color: black;
 }
 
-
+.tobereplace{
+  font-weight: bold;
+  font-size: 25px;
+}
 /*.axis {
     font: 10px sans-serif;
   }
