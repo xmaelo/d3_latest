@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script>
+        window.d3v4 = d3
+        window.d3 = null
+    </script>
+
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script>
+        window.d3v3 = d3
+        window.d3 = null
+    </script>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Projet VisualDon</title>
+</head>
+
+<body class="hero">
+    <h1>NETFLIX</h1>
+    <div class="wrap" id="doubleBar">
+        <div class="row" style="padding-bottom: 30px;">
+            <div class="char1 row legend">
+                Films
+            </div>
+            <div style="width: 20px;"></div>
+            <div class="char2 row legend">
+                Series
+            </div>
+        </div>
+    </div>
+    <div class="line dynamic" id="classment">
+         <h3 style="color: black;">Top films</h3>
+         <div class="row">
+            <input type="number" id="year" name="" class="form" value="2000" >
+         </div>
+    </div>
+
+    <div class="line" style="padding-top: 40px">
+        <div id="histogram">
+       
+        </div>
+    </div>
+
+    <div class="line" style="padding-top: 40px">
+        <div id="verticalBar">
+       
+        </div>
+    </div>
+
+
+</body>
+
+</html>

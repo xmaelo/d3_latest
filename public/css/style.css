@@ -1,0 +1,334 @@
+/*-------General-------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+
+body {
+  display: block;
+  position: relative;
+  background-image: url(/imgs/backgroundB.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Lato";
+  margin: 5%;
+}
+
+p {
+  color: beige;
+  font-size: 20px;
+}
+
+#bodyGraph > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app {
+  text-align: center;
+  color: white;
+}
+.app h1 {
+  font-weight: bolder;
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+.d-flex {
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-top: 20%;
+  font-size: 20px;
+  font-weight: 800;
+}
+.app p {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: monospace;
+  color: #7b7b7b;
+}
+.label {
+  color: white !important;
+}
+
+.line {
+  background-color: rgb(221, 207, 207);
+  text-align: center;
+  width: 100%;
+  padding-bottom: 30px;
+  margin-bottom: 5%;
+}
+#round1 {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  border: 10px #e6e6e6 solid;
+  margin: auto;
+  margin-top: 50px;
+}
+#round2 {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: #e6e6e6;
+  margin: auto;
+  cursor: pointer;
+  margin-top: 20px;
+}
+img {
+  margin-top: 5px;
+  width: 60px;
+}
+
+h2 {
+  font-size: 70px;
+  color: #e6e6e6;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+h3 {
+  font-size: 40px;
+  color: #e6e6e6;
+  text-align: center;
+}
+
+table {
+  color: white;
+  border-collapse: collapse;
+  background-color: #304549;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  border-color: #dcddde;
+}
+
+/*-------Histogramme-------*/
+
+#histogram {
+  margin-bottom: 15%;
+}
+
+#coverH {
+  /*background-color: #132329;
+  padding-left: 10%;
+  padding-right: 5%;*/
+}
+
+.bar {
+  fill: #2dd295;
+}
+
+.axis {
+  font-size: 14px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  display: none;
+}
+
+.label {
+  font-size: 13px;
+}
+
+.yAxis {
+  margin-right: 20px;
+}
+
+#histogram h3 {
+  background-color: #132329;
+  padding: 10px;
+}
+
+/*-------Line Chart-------*/
+
+#tooltip {
+  position: absolute;
+  background-color: #a6a6a6;
+  padding: 5px;
+}
+
+#vente {
+  background-color: #304549;
+  padding: 1.5%;
+}
+
+/*-------Bubble-------*/
+#bubble > h3 {
+  font-size: 40px;
+  color: rgb(225, 253, 238);
+  background-color: #171715;
+  margin-right: 60%;
+}
+
+.bubbleContainer h3 {
+  background-color: #304549;
+  padding: 1.5%;
+}
+
+.texteGenre {
+  background-color: rgb(39, 36, 36);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.ticks {
+  font: 10px sans-serif;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+.track-inset {
+  stroke: #ddd;
+  stroke-width: 8px;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  cursor: crosshair;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+.test {
+  /* background-color: red !important; */
+  margin-left: 20%;
+}
+.bulles {
+  /* background-color: green !important; */
+  margin: auto;
+}
+
+#actionColor {
+  background-color: red;
+}
+
+#rpColor {
+  background-color: rgb(151, 83, 141);
+}
+
+#actionColor {
+  background-color: red;
+}
+
+#shooterColor {
+  background-color: green;
+}
+
+#sportColor {
+  background-color: blue;
+}
+
+#platColor {
+  background-color: #bb9600;
+}
+
+
+.row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar2{
+  border-style: 1px solid white;
+  width: 500px;
+
+}
+
+.char1{
+  background-color: #BB8C88;
+  height: 30px !important;
+  text-align: center
+}
+
+.char2{
+  background-color: #ABABBF;
+  height: 30px !important;
+}
+
+.pr-50{
+  width: 50px;
+  /*padding-right: 50px;*/
+}
+
+.legend{
+  border-radius: 15px;
+  width: 100px;
+  padding-bottom: 1px;
+
+}
+.pl-50{
+  padding-left: 50px;
+}
+.wrap{
+  background-color: #DDCFCF; margin-bottom: 50px; padding-top: 50px; padding-bottom: 50px
+}
+
+.dynamic{
+  padding-top: 30px;
+}
+.form{
+  width: 300px
+  height: 30px;
+  padding-left: 10px;
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 6px;
+}
+
+.topcard{
+  margin-top: 15px;
+  width: 50px;
+  height: 30px;
+  background-color: #D8E5EE;
+  margin: auto;
+}
+
+.titl{
+}
+
+.item{
+  width: 150px;
+}
+
+.titre{
+  font-size: 21px;
+  font-weight: bold;
+  color: black;
+}
+
+
+/*.axis {
+    font: 10px sans-serif;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }*/
