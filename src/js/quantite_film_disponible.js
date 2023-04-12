@@ -30,38 +30,18 @@ var svg = d3.select("#verticalBar").append("svg")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //d3.csv("../../data/titles.csv", function(error, data) {
+const total =  disney.length +   amazon.length +  data1.length
 
 const data = [
   {value: disney.length, label: 'Disney', xAxis: 1},
   {value: amazon.length, label: 'Amazon', xAxis: 3},
   {value: data1.length, label: 'Netflix', xAxis: 2},
 ]
-    
+
   
 x.domain(data.map(function(d) { return d.xAxis; }));
 y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
-
-
-// svg.append("g")
-//     .attr("class", "x axis")
-//     .attr("transform", "translate(0," + height + ")")
-//     .call(xAxis)
-//   .selectAll("text")
-//     .style("text-anchor", "end")
-//     .attr("dx", "-.8em")
-//     .attr("dy", "-.55em")
-//     .attr("transform", "rotate(-90)" );
-
-// svg.append("g")
-//     .attr("class", "y axis")
-//     .call(yAxis)
-//   .append("text")
-//     .attr("transform", "rotate(-90)")
-//     .attr("y", 6)
-//     .attr("dy", ".71em")
-//     .style("visibility", "hidden")
-//     .text("Value ($)");
 
 svg.selectAll("bar")
     .data(data)
@@ -76,7 +56,7 @@ svg.selectAll("bar")
 
 svg.append("g")
     .attr("class", "x axis")
-    .attr("transform", "translate(0," + 80 + ")")
+    .attr("transform", "translate(0," + 0 + ")")
     .call(xAxis)
     .selectAll("text")
     .style("text-anchor", "end")
@@ -88,6 +68,6 @@ svg.append("g")
 
 const tobereplace = d3.selectAll('.tobereplace')[0]
 for (var i = tobereplace.length - 1; i >= 0; i--) {
-  tobereplace[i].innerHTML = data[i].label
+  tobereplace[i].innerHTML = data[i].label + " "+ ((data[i].value / total) * 100).toFixed(2) + " %"
   
 }

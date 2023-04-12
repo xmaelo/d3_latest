@@ -11,11 +11,21 @@ function draw(){
   const y =  d3.select("#year").property("value") || 2000
   if(String(y).length !=4) return
   let datayear = d2.filter(val => parseInt(val.release_year) == y);
-  datayear = datayear.sort((a, b) => b.imdb_votes - a.imdb_votes)
-
+  datayear = datayear.sort((a, b) => {
+    if(b.imdb_score - a.imdb_score > 0){  
+      return 1
+    }
+    if(b.imdb_score - a.imdb_score == 0 &&  (b.imdb_votes > a.imdb_votes)){  
+      return 1
+    }else{
+      return -1
+    }
+    return -1
+  })
   let films = datayear.filter(val => val.type === "MOVIE")
   let series = datayear.filter(val => val.type === "SHOW")
-
+  console.log('films films', films)
+  console.log('series series', series)
   films = films.slice(0, 3)
   series = series.slice(0, 3)
 

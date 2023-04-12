@@ -1,7 +1,6 @@
 // La version qu'on veut utiliser de d3 (ici la v3)
 const d3 = window.d3v3;
 // d pour data
-import * as d from "../../data/Video_Games_Sales_as_at_22_Dec_2016.csv";
 
 
 import * as d2 from "../../data/titles.csv";
