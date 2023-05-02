@@ -14,49 +14,111 @@
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
         window.d3v3 = d3
-        window.d3 = null
+        window.d3 = null 
     </script>
 
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 
     <title>Projet VisualDon</title>
 </head>
 
-<body class="hero">
-    <h1 style="text-align: center; font-weight: bold; color: white">NETFLIX</h1>
-    <div class="wrap" id="doubleBar">
-        <h3 style="margin-top: -15px; color: black">Nombre de film/serie produit par pays</h3>
-        <div class="row" style="padding-bottom: 30px;">
-            <div class="char1 row legend">
-                Films
+<body class="hero2  h-full w-full">
+    <div class="animted presentation  relative h-full w-full" id="animted">
+        <div class="flex flex-col center" style="height: 100%">
+            <img src="/imgs/Netflix_logo.png" style="width: 380px;">
+            <div style="text-align: center; width: 580px;  padding-top: 30px;">
+                <p>
+                    Ceci est un projet d’étude dans le but de découvrir la bibliothèque D3 de javascript pour faire de la visualisation de données
+                    <br>
+                    <br>
+                    HEIG-VD - 2023
+                </p>
             </div>
-            <div style="width: 20px;"></div>
-            <div class="char2 row legend">
-                Series
+        </div>
+    </div>
+    <div class="relative choice height-0 w-full" id="choice">
+        <div class="flex flex-col center" style="height: 100%">
+            <p style="text-align: center; font-size: 18px; font-weight: 600;">
+                Que voulez vous regarder ?
+            </p>
+            <div class="flex center" style="align-items: flex-start; padding-top: 20px;">
+                <div class="item" id="zero">
+                    <img src="/imgs/Profile-icon-2.png" style="width: 80px;">
+                    <p>Nombre de film/serie produit par pays</p>
+                </div>
+                <div class="item" id="one">
+                    <img src="/imgs/Profile-icon-2.png" style="width: 80px;">
+                    <p>Top 3 des films et series par année</p>
+                </div>
+                <div class="item" id="two">
+                    <img src="/imgs/Profile-icon-2.png" style="width: 80px;">
+                    <p>Les genres les plus popilaires</p>
+                </div>
+                <div class="item" id="tree">
+                    <img src="/imgs/Profile-icon-2.png" style="width: 80px;">
+                    <p>Quantité de film/serie disponible dans le catalogue</p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="line dynamic" id="classment">
-         <h3 style="color: black;">Top 3 des films et series par année</h3>
-         <div class="row">
-            <input type="number" id="year" name="" class="form" value="2000" >
-         </div>
-    </div>
-
-    <div class="line" style="padding-top: 40px">
-        <h3 style="color: black">Les genres les plus popilaires</h3>
-        <div id="histogram">
-       
+    <div class="graphe height-0 w-full flex flex-col go2 relative" id="carousel" >
+        <button style="width: 80px; height: 30px;" id="choix">Choix des graphe -></button>
+        <div class="carousel " data-flickity='{ "wrapAround": true }'>
+          <div class="carousel-cell2">
+              <div class="wrap" id="doubleBar">
+                <h3 style="margin-top: -15px; color: black">Nombre de film/serie produit par pays</h3>
+                <div class="row" style="padding-bottom: 30px;">
+                    <div class="char1 row legend">
+                        Films
+                    </div>
+                    <div style="width: 20px;"></div>
+                    <div class="char2 row legend">
+                        Series
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-cell2">
+              <div class="line dynamic" id="classment">
+                 <h3 style="color: black;">Top 3 des films et series par année</h3>
+                 <div class="row">
+                    <input type="number" id="year" name="" class="form" value="2000" >
+                 </div>
+            </div>
+          </div>
+          <div class="carousel-cell2">
+              <div class="line" style="padding-top: 40px">
+                    <h3 style="color: black">Les genres les plus popilaires</h3>
+                    <div id="histogram">
+                   
+                    </div>
+                </div>
+          </div>
+          <div class="carousel-cell2">
+              <div class="line" style="padding-top: 40px">
+                <h3 style=" color: black">Quantité de film/serie disponible dans le catalogue</h3>
+                <div id="verticalBar">
+               
+                </div>
+            </div>
+          </div>
         </div>
     </div>
 
-    <div class="line" style="padding-top: 40px">
-        <h3 style=" color: black">Quantité de film/serie disponible dans le catalogue</h3>
-        <div id="verticalBar">
-       
-        </div>
-    </div>
+    
+    
+    
 
+    
+
+    
+    <script type="text/javascript">
+        // function onReady(){
+        //     alert('tetgsgsgsg')
+        // }
+    </script>
 
 </body>
 

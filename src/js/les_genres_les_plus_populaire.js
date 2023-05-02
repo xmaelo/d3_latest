@@ -28,25 +28,25 @@ for (const [key, value] of Object.entries(genres)) {
 console.log('data data', data)
 
 
-data = data.sort((a, b) => a.value - b.value);
+data = data.sort((a, b) => a.value - b.value).slice(0, 10);
 
 
 
 /*----------- Dimension du graphe et des axes -----------*/
 const margin = {
-  top: 15,
+  top: 0,
   right: 0,
   bottom: 15,
-  left: 200,
+  left: 100,
 };
 
 const width = 900 - margin.left - margin.right,
-      height = 600 - margin.top - margin.bottom;
+      height = 370 - margin.top - margin.bottom;
 
 const svg = d3
   .select("#histogram")
   .append("svg")
-  .attr("width", '80%')
+  .attr("width", '70%')
   .attr("height", height + margin.top + margin.bottom)
   .attr("id", "coverH")
   .append("g")

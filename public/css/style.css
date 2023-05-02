@@ -5,11 +5,33 @@
 body {
   display: block;
   position: relative;
-  background-image: url(/imgs/backgroundB.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   font-family: "Lato";
-  margin: 5%;
+}
+
+.carousel {
+  /*background: #EEE;*/
+  /*transition: opacity 3s, transform 3s;*/
+}
+.graphe {
+  /*background: #EEE;*/
+  transition: opacity 3s, transform 3s;
+}
+
+.carousel-cell2 {
+  width: 100%;
+  height: 500px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
 }
 
 p {
@@ -335,3 +357,86 @@ td {
     stroke: #000;
     shape-rendering: crispEdges;
   }*/
+
+
+
+.presentation{
+  opacity: 1;
+  transition: opacity 3s, transform 3s;
+}
+
+.choice{
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 3s, transform 3s;
+}
+.come{
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+.go{
+  transform: translateY(-80%) !important;
+  opacity: 0 !important;
+}
+.go2{
+  transform: translateY(-200vh) !important;
+  opacity: 0 !important;
+}
+
+.transition {
+  transition: all 0s !important;
+}
+
+.opacity{
+  opacity: 1 !important;
+}
+
+.opacity-0{
+  opacity: 0 !important;
+}
+
+
+.hero2{ 
+  background-color: black;
+}
+
+.hero{
+    background-image: url(/imgs/backgroundB.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.flex{
+  display: flex;
+}
+.flex-col{
+  flex-direction: column;
+}
+.center{
+  justify-content: center;
+  align-items: center;
+}
+
+.h-full{
+  height: 100vh;
+} 
+.w-full{
+  width: 100vw;
+}
+
+.height-0{
+  height: 0px !important;
+}
+
+
+.item{
+  padding-left: 20px; 
+  padding-right: 20px; 
+  text-align: center; 
+  width: 180px;
+}
+
+.item img{
+  cursor: pointer;
+}
