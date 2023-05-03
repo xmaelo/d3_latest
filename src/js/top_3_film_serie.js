@@ -36,13 +36,10 @@ function draw(){
 
   const global_1 = container
       .insert('div') 
-      .style("padding-top", '20px')
+      .style("padding-top", '0px')
       .attr('id', 'topFims')
 
-  global_1
-      .insert('h4') 
-      .attr("class", 'titre')
-      .text('Films')
+ 
 
   const fims_row = global_1
       .insert('div')
@@ -54,27 +51,45 @@ function draw(){
       .style("padding-top", '20px')
       .attr('id', 'topShow')
 
-  global_2
-    .insert('h4') 
-    .attr("class", 'titre')
-    .text('Serries')
-
   const show_row = global_2
       .insert('div') 
       .attr('class', 'row')
 
+  const serieW =  global_2
+    .insert('div') 
+
+  const filmW =  global_2
+    .insert('div') 
+
+    serieW
+    .insert('h4') 
+      .attr("class", 'titre')
+      .text('Séries')
+
+  const block1 = serieW
+      .insert('div') 
+      .attr('class', 'flex2')
+
+    filmW
+      .insert('h4') 
+      .attr("class", 'titre')
+      .text('Films')
+  const block2 = filmW
+      .insert('div') 
+      .attr('class', 'flex2')
 
   for (let i = 0; i < films.length; i++) {
     const film = films[i]
 
-    const item = fims_row
+    const item = block1
       .insert('div')
-      .attr("class", ' item')
+      .attr("class", ' carte')
       .style("margin-right", '30px')
 
     item
       .insert('div')
        .style("margin-bottom", '10px')
+       .attr("class", 'label2')
       .text(film.title)
 
     item
@@ -88,14 +103,15 @@ function draw(){
   for (let i = 0; i < series.length; i++) {
     const film = series[i]
 
-    const item = show_row
+    const item = block2
       .insert('div')
-      .attr("class", ' item')
+      .attr("class", ' carte')
       .style("margin-right", '30px')
 
     item
       .insert('div')
        .style("margin-bottom", '10px')
+       .attr("class", 'label2')
       .text(film.title)
 
     item

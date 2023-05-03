@@ -8,20 +8,13 @@ body {
   font-family: "Lato";
 }
 
-.carousel {
-  /*background: #EEE;*/
-  /*transition: opacity 3s, transform 3s;*/
-}
-.graphe {
-  /*background: #EEE;*/
-  transition: opacity 3s, transform 3s;
-}
 
 .carousel-cell2 {
   width: 100%;
   height: 500px;
   margin-right: 10px;
   border-radius: 5px;
+  background-color: black;
 }
 
 /* cell number */
@@ -73,10 +66,11 @@ p {
 }
 .label {
   color: white !important;
+  transform: translateX(8px);
 }
 
 .line {
-  background-color: rgb(221, 207, 207);
+  /*background-color: black;*/
   text-align: center;
   width: 100%;
   padding-bottom: 30px;
@@ -143,7 +137,7 @@ td {
 }
 
 .bar {
-  fill: #2dd295;
+  fill: red;
 }
 
 .axis {
@@ -157,11 +151,13 @@ td {
 }
 
 .label {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .yAxis {
   margin-right: 20px;
+  font-size: 19px;
+  font-weight: normal;
 }
 
 #histogram h3 {
@@ -281,71 +277,105 @@ td {
 }
 
 .char1{
-  background-color: #BB8C88;
+  background-color: red;
   height: 30px !important;
   text-align: center
+  font-weight: 800;
+  color: white;
 }
 
 .char2{
-  background-color: #ABABBF;
+  background-color: white;
   height: 30px !important;
+   font-weight: 800;
 }
 
 .pr-50{
   width: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
   /*padding-right: 50px;*/
+}
+
+.wrap > div:nth-child(n+2):nth-child(-n+3) {
+  margin-left: 5px;
+}
+
+.tobereplace:nth-child(n+1) {
+  background-color: red;
 }
 
 .legend{
   border-radius: 15px;
   width: 100px;
   padding-bottom: 1px;
+  font-size: 19px;
+  font-weight: bold;
 
 }
 .pl-50{
   padding-left: 50px;
 }
 .wrap{
-  background-color: #DDCFCF; margin-bottom: 50px; padding-top: 50px; padding-bottom: 50px
+  background-color: black; margin-bottom: 50px; padding-top: 50px; padding-bottom: 50px
 }
 
 .dynamic{
-  padding-top: 30px;
+  padding-top: 7px;
+  padding-bottom: 40px !important;
 }
 .form{
-  width: 300px
-  height: 30px;
+  width: 600px
+  height: 50px;
   padding-left: 10px;
   background-color: white;
   border-radius: 10px;
-  padding-top: 5px;
-  padding-bottom: 6px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  font-size: 25px;
 }
 
 .topcard{
-  margin-top: 15px;
-  width: 50px;
+  width: 70px;
   height: 30px;
-  background-color: #D8E5EE;
+  font-weight: bold;
+  background-color: red;
   margin: auto;
+  color: white;
+  font-size: 16px;
 }
 
 .titl{
 }
 
-.item{
-  width: 150px;
+.carte{ 
+  width: 250px;
+  text-align: center;
+}
+.label2{
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  /*width: 70px;*/
+}
+
+.flex2{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .titre{
   font-size: 21px;
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 .tobereplace{
   font-weight: bold;
   font-size: 25px;
+  color: white !important;
 }
 /*.axis {
     font: 10px sans-serif;
@@ -370,6 +400,15 @@ td {
   opacity: 0;
   transition: opacity 3s, transform 3s;
 }
+
+.carousel {
+  /*background: #EEE;*/
+  /*transition: opacity 3s, transform 3s;*/
+}
+.graphe {
+  /*background: #EEE;*/
+  transition: opacity 3s, transform 3s;
+}
 .come{
   transform: translateY(0) !important;
   opacity: 1 !important;
@@ -380,12 +419,15 @@ td {
   opacity: 0 !important;
 }
 .go2{
-  transform: translateY(-200vh) !important;
+  /*transform: translateY(-200vh) !important;*/
   opacity: 0 !important;
 }
 
 .transition {
   transition: all 0s !important;
+}
+.transition-bis {
+  transition: transform 0s, opacity 3s !important;
 }
 
 .opacity{
@@ -402,7 +444,7 @@ td {
 }
 
 .hero{
-    background-image: url(/imgs/backgroundB.jpg);
+    background-image: url(/imgs/Netflix_bgackground.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -417,19 +459,24 @@ td {
   justify-content: center;
   align-items: center;
 }
-
+html, body {margin: 0; height: 100%; overflow: hidden}
 .h-full{
-  height: 100vh;
+  height: 100%;
 } 
 .w-full{
-  width: 100vw;
+  /*width: 100vw;*/
 }
 
 .height-0{
   height: 0px !important;
 }
 
-
+.d-non{
+  display: none;
+}
+.d-bloc{
+  display: block;
+}
 .item{
   padding-left: 20px; 
   padding-right: 20px; 
@@ -439,4 +486,8 @@ td {
 
 .item img{
   cursor: pointer;
+}
+
+body{
+  margin: 0px !important;
 }

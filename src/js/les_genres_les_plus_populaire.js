@@ -72,7 +72,7 @@ const y = d3.scale
   );
 
 let yAxis = d3.svg.axis().scale(y).tickSize(0).orient("left");
-svg.append("g").attr("class", "yAxis").call(yAxis).style("stroke", "black");
+svg.append("g").attr("class", "yAxis").call(yAxis).style("stroke", "white").style("transform", "translateX(-8px)");
 
 /*----------- Création des barres -----------*/
 const bars = svg.selectAll(".bar").data(data).enter().append("g");
@@ -83,18 +83,17 @@ bars
   .attr("y", function (d) {
     return y(d.name);
   })
-  .style("stroke", "black")
+  .style("stroke", "white")
   .attr("height", y.rangeBand())
   .attr("x", 0)
   .attr("width", function (d) {
     return x(d.value);
   });
 
-// Chiffres de vente sur la droite des barres
 bars
   .append("text")
   .attr("class", "label")
-  .style("stroke", "black")
+  .style("stroke", "white")
   .attr("y", function (d) {
     return y(d.name) + y.rangeBand() / 2 + 4;
   })

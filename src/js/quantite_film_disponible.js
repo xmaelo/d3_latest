@@ -33,9 +33,9 @@ var svg = d3.select("#verticalBar").append("svg")
 const total =  disney.length +   amazon.length +  data1.length
 
 const data = [
-  {value: disney.length, label: 'Disney', xAxis: 1},
-  {value: amazon.length, label: 'Amazon', xAxis: 3},
-  {value: data1.length, label: 'Netflix', xAxis: 2},
+  {value: disney.length, label: 'Disney', xAxis: 1, color: "yellow"},
+  {value: amazon.length, label: 'Amazon', xAxis: 3, color: "blue"},
+  {value: data1.length, label: 'Netflix', xAxis: 2, color: "red"},
 ]
 
   
@@ -46,7 +46,7 @@ y.domain([0, d3.max(data, function(d) { return d.value; })]);
 svg.selectAll("bar")
     .data(data)
   .enter().append("rect")
-    .style("fill", "steelblue")
+    .style("fill", function(d) { return d.color; })
     .attr("x", function(d) { return x(d.xAxis); })
     .attr("width", x.rangeBand())
     .attr("y", function(d) { return y(d.value); })
@@ -56,18 +56,27 @@ svg.selectAll("bar")
 
 svg.append("g")
     .attr("class", "x axis")
-    .attr("transform", "translate(0," + 0 + ")")
+    .attr("transform", "translate(0," + 30 + ")")
     .call(xAxis)
     .selectAll("text")
     .style("text-anchor", "end")
     .attr("dx", "-.8em")
     .attr("class", "tobereplace")
+    .style("fill", "white")
     .attr("dy", "-.55em")
     .attr("transform", "rotate(-90)" )
     .text('hdhd')
 
+// svg.selectAll("rect")
+//   .transition()
+//   .duration(3000)
+//   .attr("y", function(d) { return y(d.value); })
+//   .attr("height", function(d) { return height - y(d.value); })
+//   .delay(function(d,i){console.log(i) ; return(i*100)})
+
+const colors = ["red", "blue", "yellow"]
 const tobereplace = d3.selectAll('.tobereplace')[0]
 for (var i = tobereplace.length - 1; i >= 0; i--) {
-  tobereplace[i].innerHTML = data[i].label + " "+ ((data[i].value / total) * 100).toFixed(2) + " %"
+  tobereplace[i].innerHTML = data[i].label + " "+ ((data[i].value / 1000)).toFixed(1) + "k"
   
 }
